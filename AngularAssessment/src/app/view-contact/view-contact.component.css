@@ -1,0 +1,10 @@
+.container{
+    width: 500px;
+    border-radius: 20px;
+    background-color:rgb(245, 242, 237);
+}
+
+mat-toolbar{
+    margin: 0px auto;
+    display: flex;
+}

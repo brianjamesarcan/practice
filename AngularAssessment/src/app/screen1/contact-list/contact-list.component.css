@@ -1,0 +1,26 @@
+.tablelist {
+  display: flex;
+    margin: 0px auto;
+    width: 1050px;
+    text-align: center;
+    padding:0px 20px;
+  }
+
+  button{
+    padding: 1px 2px 1px ;
+    /* margin: 5px; */
+    width: 90px;
+  }
+
+  /* thead{
+    width: 1020px;
+  } */
+ 
+/* 
+td{
+  text-align: center;
+}
+
+th{
+  text-align: center;
+} */

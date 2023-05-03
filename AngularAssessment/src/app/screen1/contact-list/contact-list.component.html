@@ -1,0 +1,34 @@
+<div class="tablelist">
+<table class="table table-striped" >
+
+
+  <thead>
+  <tr>
+      <th> ID </th>
+      <th> Name </th>
+      <th> Email </th>
+      <th> Contact Number </th>
+    </tr>
+  </thead> 
+  <h1 *ngIf="InputList.length == 0">No Data Available</h1>
+    <tbody>
+        <tr *ngFor="let Data of InputList">
+            <td>{{Data.id.substr(1,5)}}</td>
+            <td>{{Data.name}}</td>
+            <td>{{Data.email}}</td>
+            <td>{{Data.contact}}</td>
+            <td>
+            <a [routerLink]="['/Contact',Data.id, Data.name, Data.email, Data.contact]">
+            <button type="button" class="btn btn-primary">View</button></a>
+            ||
+            <button type="button" class="btn btn-secondary" (click)="editFunction(Data.id)">Edit</button>
+            ||
+            <button type="button" class="btn btn-danger" (click)="DeleteFunction(Data.id)">Delete</button>
+            </td>
+          </tr>
+    </tbody>
+   
+</table>
+</div>
+  
+  

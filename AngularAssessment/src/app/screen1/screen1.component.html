@@ -1,0 +1,3 @@
+<mat-toolbar>My Contact</mat-toolbar>
+<app-add-form (OnAddEvent)="OutputAdd($event)" [InputEdit]="user" ></app-add-form>
+<app-contact-list  [InputList]="ContactData" (OnEditEvent)="OutputEdit($event)"></app-contact-list>

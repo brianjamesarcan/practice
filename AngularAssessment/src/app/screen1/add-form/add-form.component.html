@@ -1,0 +1,36 @@
+<div class="container">
+    <form [formGroup]="add" (ngSubmit)="AddFunction()" >
+      <br>
+      <div class="form-group">
+        <label label="Name">Complete Name</label>
+        <input class = "form-control" type="text" placeholder="First Name Last Name" formControlName="name">
+          <span *ngIf="!add.get('name').valid && add.get('name').touched" class="help-block">
+          <span *ngIf="add.get('name').errors['required']">Name is Required</span>
+        </span>
+      </div>
+      <br>
+      <div class="form-group">
+        <label label="email">Email Address</label>
+        <input class = "form-control" type="email" placeholder="Email Address" formControlName="email">
+          <span *ngIf="!add.get('email').valid && add.get('email').touched" class="help-block">
+          <span *ngIf="add.get('email').errors['required']">Email is Required</span>
+          <span *ngIf="add.get('email').errors['email']">Enter a Valid Email</span>
+        </span>
+      </div>
+      <br>
+      <div class="form-group">
+        <label label="Number">Contact Number</label>
+        <input class = "form-control" type="contact" placeholder="Contact number" formControlName="contact">
+          <span *ngIf="!add.get('contact').valid && add.get('contact').touched" class="help-block">
+          <span *ngIf="add.get('contact').errors['required']">Contact number Required</span>
+          <span *ngIf="add.get('contact').errors['pattern']">Enter a valid phone number</span>
+        </span>
+      </div>
+      <br>
+      <button class= "btn btn-primary" type="submit" [disabled]="!add.valid" >{{ !editMode ?  'Add' :'Update'  }}</button>
+      <br><br>
+    </form>
+  </div>
+
+  
+  

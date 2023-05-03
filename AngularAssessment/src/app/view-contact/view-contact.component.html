@@ -1,0 +1,41 @@
+<mat-toolbar>My Contact</mat-toolbar>
+<br>
+<button class="btn btn-info" routerLink="">Back</button>
+<br><br>
+<div class="container">
+  <h1> {{contact.name}}</h1>
+  <table>
+    <tbody>
+      <th><h2> <i class="bi bi-person-badge"></i>:</h2> </th>
+      <h3>{{contact.id.substr(1,5)}}</h3>
+    </tbody>
+    <tbody>
+      <th> <h2><i class="bi bi-envelope"></i> :  </h2></th>
+      <th><h3><a href="mailto:{{contact.contact}}">{{contact.contact}}</a></h3></th>
+    </tbody>
+    <tbody>
+      <th><h2><i class="bi bi-telephone"></i> :  </h2> </th>
+      <th><h3>{{contact.email}}</h3></th>
+    </tbody>
+
+    <!-- <tbody >
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.contact}}</td>
+        </tr>
+    </tbody> -->
+   
+  </table>
+</div>
+
+
+
+
+
+
+
+
+  
+  
